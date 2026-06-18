@@ -1,0 +1,67 @@
+{
+  "name": "dach-holidays",
+  "version": "0.1.0",
+  "description": "TypeScript library for public holidays in Germany, Austria, and Switzerland — all regions, fully typed.",
+  "keywords": [
+    "holidays",
+    "feiertage",
+    "germany",
+    "deutschland",
+    "austria",
+    "österreich",
+    "switzerland",
+    "schweiz",
+    "dach",
+    "typescript"
+  ],
+  "author": "pouya1364",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "lint": "biome check src tests",
+    "format": "biome format --write src tests",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run test:run && npm run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pouya1364/dach-holidays.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pouya1364/dach-holidays/issues"
+  },
+  "homepage": "https://github.com/pouya1364/dach-holidays#readme"
+}
