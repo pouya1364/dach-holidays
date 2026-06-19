@@ -151,3 +151,7 @@ npm run build
 ## License
 
 MIT © pouya1364
+
+---
+
+Looking for PLZ validation too? Check out [de-plz](https://www.npmjs.com/package/de-plz) — German postal code validation and federal state lookup.
